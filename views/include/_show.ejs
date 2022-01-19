@@ -1,0 +1,19 @@
+<% for(var i = 0; i < items.length; i++) { %>
+    <tr>
+        <td><%= i + 1 %></td>
+        <td><%= items[i].name %></td>
+        <td><%= items[i].type %></td>
+        <td><%= items[i].status %></td>
+        <td><%= items[i].location %></td>
+        <td><%= items[i].receivedDate ? items[i].receivedDate.substring(0, 10) : "" %></td>
+        <td><%= items[i].shippedDate ? items[i].shippedDate.substring(0, 10) : "" %></td>
+        <td>
+            <a href="/update-item?id=<%= items[i]._id%>" class="btn border-shadow update">
+                <span><i class="fas fa-edit"></i></span>
+            </a>
+            <a class="btn border-shadow delete" data-id=<%= items[i]._id%> >
+                <span><i class="far fa-trash-alt"></i></span>
+            </a>
+        </td>
+    </tr>
+<% } %>
