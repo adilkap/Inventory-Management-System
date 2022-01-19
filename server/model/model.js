@@ -1,24 +1,24 @@
 const mongoose = require('mongoose');
 
 var schema = new mongoose.Schema({
-    name : {
+    name: {
         type : String,
         required: true
     },
-    type : {
+    type: {
         type: String,
         required: true
     },
-    status : {
+    status: {
         type: String,
         required: true
     },
-    location : {
+    location: {
         type: String,
         required: true
     },
-    receivedDate : Date,
-    shippedDate : Date
+    receivedDate: Date,
+    shippedDate: Date,
 })
 
 const Itemdb = mongoose.model('itemdb', schema);
